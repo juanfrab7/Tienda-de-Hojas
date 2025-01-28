@@ -1,0 +1,66 @@
+
+/*Comienzo dejando en cero todos los campos con el selector universal*/
+
+
+p { 
+    color: brown;
+    text-align: left;
+
+}
+
+h1 {
+    /* Le doy formato a mis encabezados principales*/
+    color: crimson;
+    text-align: center;
+    font-size: 50px;
+    margin: 5px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+    
+
+}
+
+h2{
+
+    font-size: 20px;
+    text-decoration: underline;
+}
+li{
+
+    color: coral;
+}
+body{
+    /*Le doy formato al fondo*/
+    background-color:honeydew;
+}
+
+#principal {
+    color:crimson;
+    font-family: "Hanalei Fill", serif;
+    font-size: 70px;
+    text-align: center;
+}
+
+#logo {
+
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    height: auto;
+}
+
+#marvel {
+
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height:300px;
+}
+
+#mensaje {
+    /*Con Resize le impido al usuario que pueda modificar las dimensiones del textarea*/
+    resize: none;
+    width: 300px;
+    height: 100px;
+}

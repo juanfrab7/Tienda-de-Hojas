@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vinculo mi html con css mediante vinculación externa -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet">
+
+
+    <title>Contacto</title>
+</head>
+
+
+<h1 id="principal">Contacto</h1>
+<body>
+    <main>
+        <form action="/submit" method="post" enctype="application/x-www-form-urlencoded">
+
+            <label for="mensaje">Mensaje:</label>
+            <!-- Ingreso un textarea para permitirle al usuario cargar datos alfanuméricos -->
+            <textarea name="mensaje" id="mensaje" placeholder="Ingrese aquí su mensaje" required></textarea>
+
+            <br><br>
+
+            <label for="correo">Correo electrónico: </label>
+            <input type="email" name="correo" id="correo" placeholder="info@ejemplo.com" required> 
+
+            <br><br>
+
+            <label for="genero">Género:</label>
+            <input type="radio" name="genero" id="genero"> 
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="genero" id=""> 
+            
+            <label for="femenino">Femenino</label>
+
+            <input type="radio" name="genero" id="">
+            <label for="otro">Otro</label>
+
+            <br><br>
+
+            <label for="suscribe">Suscribirse:</label>
+            <input type="checkbox" name="suscribe" id="suscribe">
+
+            <br><br>
+
+            <label for="pais">País</label>
+            <select name="" id="">
+                <option value="argentina">Argentina</option>
+                <option value="uruguay">Uruguay</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <br><br>
+
+            <input type="submit" value="Enviar">
+
+        </form>
+    </main>
+
+    <hr><br>
+    
+    <!-- mailto: -->
+    <a href="mailto:tiendadehojas@gmail.com">Contactate con nosotros por mail</a>
+    <hr><br>
+    <a href="index.html">Volver al home</a>
+
+    <footer>
+        <p>© Copyright - 2024 www.tiendadehojas.com.ar, TODOS LOS DERECHOS RESERVADOS.</p>
+    </footer>
+</body>
+<!-- Pie de página -->
+
+</html>

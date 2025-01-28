@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--La etiqueta meta proporciona datos al navegador que no son mostrados directamente al usuario-->
+    <!-- UTF-8 es la codificación universal de caracteres que le permite al explorador mostrar correctamente el texto de distintos alfabetos -->
+    <meta charset="UTF-8">
+    <!-- Se configura automáticamente el viewport para que nuestro sitio web se adapte al dispositivo con el que acceda el usuario  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Indico con metadatos palabras claves que va a utilizar el buscador para encontrar el contenido-->
+    <meta name="keywords" content="piñata,cumpleaños,sorpresa,alegría,regalos,golosinas">
+    <!-- Description es la descripción del sitio web que va a aparecer debajo del enlace en Google -->
+    <meta name="description" content="Diseño de piñatas hechas a pedido y con mucho amor" data-react-helmet="true">
+    <meta name="author" content="Juan Francisco Barragán">
+    <meta name="Copyright" content="Constanza Carna">
+    <!-- Le permito a google tener una copia de nuestra pagina -->
+    <meta name="robots" content="index">
+
+    <!-- Le coloco un icono -->
+    <link rel="icon" href="imagenes/logo.ico">
+
+    <!-- Vinculo mi html con css mediante vinculación externa -->
+     <link rel="stylesheet" href="style.css">
+
+    <!--Fuentes  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet">
+    
+    <!-- title es el texto de la pestaña -->
+    <title>Bienvenidos a Tienda de Hojas</title>
+</head>
+
+
+<!--La etiqueta <div> funciona y sirve de contenedor de bloque,-->
+<!--La etiqueta <span> funciona como un contenedor de línea,-->
+
+<body>
+    <!--header es la parte superior de una página. Contiene los elementos de navegación-->
+    <!--El header debe replicarse en todo el sitio web-->
+    <header>
+        <!-- Utilizo la etiqueta nav como sección de la página que contiene los enlaces de navegación -->
+        <nav>
+            <ul>
+
+                <!-- Enlace absoluto. Abre la pagina de instagram en una nueva pestaña -->
+                <!-- Con target = _blank lo que hacemos es configurar el enlace para que se abra en una nueva pestaña -->
+                <li><a href="https://www.instagram.com/tienda.de.hojas/" target="_blank">Conocé nuestra página de instagram</a></li>
+
+                <br><br>
+
+                <!-- Enlaces relativos -->
+                <li><a href="quienes_somos.html">Quienes somos</a></li> 
+                <br><br>
+
+                <li><a href="login.html">Registrarse o Iniciar sesión</a> </li>
+                <br><br>
+
+                <li><a href="contacto.html">Contacto</a> </li>
+                <br><br>
+
+                <li><a href="precios.html">Precios</a></li>
+                <br><br>
+
+                <!-- Enlace interno | Usamos un ID y un # -->
+                <li><a href="#testimonios">Testimonios</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Confecciono h1 que es una etiqueta de encabezado -->
+    <h1 id="principal">Bienvenidos a Tienda de Hojas</h1>
+    <img src="imagenes/logo.jpg" alt="logo"  id="logo" title="Tienda de Hojas">
+    
+    <!-- Introduzco un párrafo de introducción -->
+    <p>Bienvenidos a Tienda de Hojas, el lugar donde podrás conseguir tu piñata soñada al mejor precio</p>
+    
+
+    <!-- Ingreso una ruta o link -->
+    <a href=""></a>
+    <!-- Ingreso una imagen. alt es el texto descriptivo de la imagen -->
+    <img src="" alt="">
+
+    <hr><br>
+    <main>
+
+    </main>
+
+   
+    <br>
+
+        <section id="testimonios">
+        <h2>Testimonios:</h2>
+
+        <p>Laura Varela:</p>
+        
+        <p>"Divina Coti. Le pedimos el modelo que queríamos y lo preparó con una calidad de diseño soñada"</p>
+        
+        <br>
+
+        <p>Ricardo Ruiz:</p>
+        
+        <p>"La verdad Coti nos salvó. Nos hizo la piñata que Uli deseaba en tiempo récord y a un precio super accesible"</p>
+
+            </tr>
+    </section>
+
+    <section id="video">
+        <!--Videos-->
+        <h2>Visita nuestro website</h2>
+        <!-- Con controls le habilitamos al video el recurso del navegador para poder ejecutarlo -->
+        <video src="videos/video.mp4" controls width="640" height="360"></video>
+    </section>
+    <br>
+
+
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© Copyright - 2024 www.tiendadehojas.com.ar, TODOS LOS DERECHOS RESERVADOS.</p>
+    </footer>
+</body>
+</html>
