@@ -1,10 +1,63 @@
 
-/*Comienzo dejando en cero todos los campos con el selector universal*/
+/*Comienzo dejando en cero todos los campos utilizando el selector universal y reseteando los valores a cero*/
 
+* {
+
+    margin: 0;
+    padding: 0;
+    /*Me deja configurado  el tamaño total máximo de la caja lo que yo defina de Heigt y widht*/
+    box-sizing: border-box;
+
+}
+
+#header-index{
+    background-color:rgb(107, 214, 107);
+    /*Por defecto flex trabaja en fila*/
+    display: block;
+    justify-content: end;
+    padding-right: 20px;
+    border: 3px solid black;
+}
+
+header nav ul{
+
+    display: flex;
+    color: rgb(36, 189, 44);
+    list-style: none;
+    justify-content: center;
+    align-items:flex-start;
+    /*Gap es una propiedad que trabaja en los dos ejes y funciona con Flex*/
+    gap: 30px;
+    column
+}
+
+
+#main-index{
+    display: block;
+    /*flex-wrap:nowrap;*/
+    
+}
+
+.bienvenidos-lugar{
+    font-size: 50px;
+}
 
 p { 
-    color: brown;
+    color: rgb(58, 168, 55);
+    height: 40%;
     text-align: left;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.visita-web{ 
+    color: black;
+    height: 40%;
+    text-align: left;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline;
 
 }
 
@@ -23,6 +76,13 @@ h2{
 
     font-size: 20px;
     text-decoration: underline;
+    text-align: center;
+}
+
+.quienes_somos:hover{
+
+    background-color: beige;
+    color: darkorchid;
 }
 li{
 
@@ -43,10 +103,39 @@ body{
 #logo {
 
     display: block; 
+    height: 20%;
+    width: 20%;
     margin-left: auto;
     margin-right: auto;
     max-width: 50%;
     height: auto;
+}
+
+.testimonios {
+    text-align: center;
+    align-content: center;
+}
+
+
+.video_intro{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    background-color: rgb(135, 222, 142);
+    justify-content: center;
+    align-items: center;
+    /*padding: 20px;*/
+    border: 3px solid black;
+    /*margin: 10px;*/
+
+
+}
+
+
+#video_intro {
+    align-items: center;
+    justify-content: center;
+    
 }
 
 #marvel {
@@ -54,8 +143,9 @@ body{
     display: block; 
     margin-left: auto;
     margin-right: auto;
-    width: 250px;
-    height:300px;
+    /*Coloco unidades relativas para la imagen*/
+    width: 15%;
+    height:15%;
 }
 
 #mensaje {
@@ -63,4 +153,17 @@ body{
     resize: none;
     width: 300px;
     height: 100px;
+}
+
+.footer{ 
+    color: rgb(58, 168, 55);
+    height: 40%;
+    text-align: left;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.tabla-precios{
+    margin:50px;
 }

@@ -15,77 +15,88 @@
 </head>
 
 <body>
-        <h1 id="principal">Iniciar sesión</h1>
+    
+    <!--Encabezado-->
+    <header id="header-login">
+        <div>    
+            <h1 id="principal" class="iniciar-sesion">Iniciar sesión</h1>
+        </div>
+    </header>
 
-    <!--Formulario de registro-->
-    <form action="/submit" method="post" enctype="application/x-www-form-urlencoded">
-        <!--La etiqueta fieldse agrupa elementos de un formulario-->
-        <fieldset>
-            <legend>Iniciar sesión</legend>
-            <!--Etiqueta contenedora-->    
-            <label for="nombre">Nombre de usuario: </label>
-            <input type="text" name="nombre" id="nombre">
-            <br><br>    
+    <!--Contenido principal-->
+    <main>
+
+        <!--Formulario de registro-->
+        <form action="/submit" method="post" enctype="application/x-www-form-urlencoded">
+            <!--La etiqueta fieldse agrupa elementos de un formulario-->
+            <fieldset>
+                <legend>Iniciar sesión</legend>
+                <!--Etiqueta contenedora-->    
+                <label for="nombre">Nombre de usuario: </label>
+                <input type="text" name="nombre" id="nombre">
+                <br><br>    
+                    
+                <label for="password">Contraseña:</label>
+                <input type="password" name="password" id="password">
+                <br><br> 
+
+                <input type="submit" value="Iniciar sesión">
+            </fieldset>
+        </form>
+
+        <hr><br>
+        <p>Podés registrarte si nunca lo hiciste</p>
+        <form action="/submit" method="post" enctype="application/x-www-form-urlencoded"> 
+            <fieldset>
+                <legend>Registrarse</legend>
+
+                <!--Etiqueta contenedora-->   
                 
-            <label for="password">Contraseña:</label>
-            <input type="password" name="password" id="password">
-            <br><br> 
+                <label for="correo">Correo electrónico: </label>
+                <!--El name es el nombre que identifica la variable y en el mismo queda grabado lo que carguemos-->
+                <!-- Required me obliga si o si cargar datos en el campo para poder enviarlos. Hago validaciones del lado del cliente-->
+                <input type="email" name="correo" id="correo" placeholder="info@ejemplo.com" required> 
+                <br><br> 
 
-            <input type="submit" value="Iniciar sesión">
-        </fieldset>
-    </form>
-
-    <hr><br>
-    <p>Podés registrarte si nunca lo hiciste</p>
-    <form action="/submit" method="post" enctype="application/x-www-form-urlencoded"> 
-        <fieldset>
-            <legend>Registrarse</legend>
-
-            <!--Etiqueta contenedora-->   
-            
-            <label for="correo">Correo electrónico: </label>
-            <!--El name es el nombre que identifica la variable y en el mismo queda grabado lo que carguemos-->
-            <!-- Required me obliga si o si cargar datos en el campo para poder enviarlos. Hago validaciones del lado del cliente-->
-            <input type="email" name="correo" id="correo" placeholder="info@ejemplo.com" required> 
-            <br><br> 
-
-            <label for="fecha_nacimiento">Fecha de nacimientot:</label>
-            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento">
-            <br><br>
-            
-            <label for="username">Nombre de usuario: </label>
-            <input type="text" name="username" id="username" placeholder="Ingrese su nombre de usuario" minlength="6" required>  
-            <br><br>   
+                <label for="fecha_nacimiento">Fecha de nacimientot:</label>
+                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento">
+                <br><br>
                 
-            <label for="password">Contraseña:</label>
-            <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" required>
-            <br><br> 
+                <label for="username">Nombre de usuario: </label>
+                <input type="text" name="username" id="username" placeholder="Ingrese su nombre de usuario" minlength="6" required>  
+                <br><br>   
+                    
+                <label for="password">Contraseña:</label>
+                <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" required>
+                <br><br> 
 
-            <label for="confirmacion">Confirmar contraseña:</label>
-            <input type="confirmacion" name="confirmacion" id="confirmacion" placeholder="Repita su contraseña" required>
-            <br><br> 
+                <label for="confirmacion">Confirmar contraseña:</label>
+                <input type="confirmacion" name="confirmacion" id="confirmacion" placeholder="Repita su contraseña" required>
+                <br><br> 
 
-            <label for="terminos">Aceptas los terminos y condiciones:</label>
-            <input type="checkbox" name="checkbox" id="checkbox" required>
-            <br><br>
+                <label for="terminos">Aceptas los terminos y condiciones:</label>
+                <input type="checkbox" name="checkbox" id="checkbox" required>
+                <br><br>
 
-            <label for="novedades">¿Querés recibir noticias nuestras?</label>
-            <input type="checkbox" name="novedades" id="novedades">
-            <br><br>
+                <label for="novedades">¿Querés recibir noticias nuestras?</label>
+                <input type="checkbox" name="novedades" id="novedades">
+                <br><br>
 
-            <input type="submit" value="Registrarse">
-            <input type="reset" value="Borrar">
-        </fieldset>
+                <input type="submit" value="Registrarse">
+                <input type="reset" value="Borrar">
+            </fieldset>
 
-    </form>
+        </form>
 
 
-    <hr><br>
-    <a href="index.html">Volver a la página de inicio</a>
+        <hr><br>
+        <a href="index.html">Volver a la página de inicio</a>   
+    
+    </main>
 
     <!-- Pie de página -->
     <footer>
-        <p>© Copyright - 2024 www.tiendadehojas.com.ar, TODOS LOS DERECHOS RESERVADOS.</p>
+        <div class="footer">© Copyright - 2024 www.tiendadehojas.com.ar, TODOS LOS DERECHOS RESERVADOS.</div>
     </footer>
 </body>
 
