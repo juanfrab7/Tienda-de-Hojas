@@ -1,5 +1,6 @@
 
 /*Comienzo dejando en cero todos los campos utilizando el selector universal y reseteando los valores a cero*/
+/*Comienzo mi codigo de css con la filosofía mobile first, para luego adaptarlo a tablets y PCs de escritorios con media queries*/
 
 * {
 
@@ -166,4 +167,9 @@ body{
 
 .tabla-precios{
     margin:50px;
+}
+
+.contenedor-grid{
+
+    
 }
