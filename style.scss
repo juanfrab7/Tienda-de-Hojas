@@ -1,0 +1,706 @@
+
+/*Importo los valores de variables desde el archivo _variables.scss que se encuentra en la carpeta utilidades*/
+@import "utilidades/variables";
+
+/*Importo el Mixin con variables*/
+@import "general/home";
+
+/*Comienzo dejando en cero todos los campos utilizando el selector universal y reseteando los valores a cero*/
+/*Comienzo mi codigo de css con la filosofía mobile first, para luego adaptarlo a tablets y PCs de escritorios con media queries*/
+    * {
+        margin: 0;
+        padding: 0;
+        /*Me deja configurado  el tamaño total máximo de la caja lo que yo defina de Heigt y widht*/
+        box-sizing: border-box;
+    }
+    
+    /* Media query para celulares */
+
+    /*Títulos h1 para celulares*/
+    h1 {
+        /* Le doy formato a mis encabezados principales*/
+        color: $color_h1;
+        text-align: center;
+        font-size: 50px;
+        margin: 5px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow", sans-serif;
+    }
+
+
+
+    /*Títulos h2 para celulares*/
+    h2 {
+        font-size: 20px;
+        text-decoration: underline;
+        text-align: center;
+    }
+    
+    /*Configuración p parrafos para celulares*/
+    p {
+        color: $color_p;
+        height: 40%;
+        text-align: left;
+        font-size: 25px;
+        text-align: center;
+    }
+
+
+
+    /*Nesting header para celulares con nesting*/
+    header{
+      /*Color del menu hamburguesa*/
+      background-color: $fondo_header;
+      display: block;
+      justify-content: end;
+      padding-right: 20px;
+      border: 3px solid black;
+
+      nav{
+        ul{
+          font-size: 15px;
+          /*Por defecto flex trabaja en fila*/
+          /*display: flex;*/
+          color: $color_flex;
+          list-style: none;
+          /*justify-content: center;*/
+          align-items: flex-start;
+          /*Gap es una propiedad que trabaja en los dos ejes y funciona con Flex*/
+          gap: 5px;
+          flex-direction: column;
+
+        }
+      }
+    }
+
+    
+    #main-index {
+        display: block;
+    }
+    
+    .bienvenidos-lugar {
+        font-size: 50px;
+    }
+    
+    .visita-web {
+        color: black;
+        height: 40%;
+        text-align: left;
+        font-size: 25px;
+        text-align: center;
+        text-decoration: underline;
+    }
+    
+    .quienes_somos:hover {
+        background-color: beige;
+        color: darkorchid;
+    }
+    
+    /*Lista de Precios para celulares*/
+    li {
+        color: coral;
+    }
+
+    /*body para celulares*/
+    body {
+        /*Le doy formato al fondo*/
+        background-color: $color_body;
+    }
+    
+    #principal {
+        color: crimson;
+        font-family: "Hanalei Fill", serif;
+        font-size: 70px;
+        text-align: center;
+    }
+    
+    /*Logo para celulares*/
+    #logo {
+        display: block;
+        height: 20%;
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+        height: auto;
+    }
+    
+    /*Laura Varela para celulares*/
+    #laura_varela {
+      display: block;
+      height: 20%;
+      width: 20%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50%;
+      /*height: auto;*/
+    }
+
+    /*Ricardo Ruiz para celulares*/
+    #ricardo_ruiz {
+      display: block;
+      height: 20%;
+      width: 20%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50%;
+      /*height: auto;*/
+    }
+    
+    .testimonios {
+        text-align: center;
+        align-content: center;
+    }
+    
+    .video_intro {
+        /*display: flex;*/
+        width: 100%;
+        height: 60%;
+        background-color: $color_flex;
+        /*justify-content: center;*/
+        align-items: center;
+        /*padding: 20px;*/
+        border: 3px solid black;
+        /*margin: 10px;*/
+    }
+    
+    #video_intro {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /*Imagen de quienes somos para Tablet*/
+    #marvel {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /*Coloco unidades relativas para la imagen*/
+        width: 420px;
+        height: 420px;
+    }
+    
+    #mensaje {
+        /*Con Resize le impido al usuario que pueda modificar las dimensiones del textarea*/
+        resize: none;
+        width: 300px;
+        height: 100px;
+    }
+    
+    /*footer para celulares*/
+    .footer {
+        color: $color_footer;
+        height: 40%;
+        text-align: left;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .tabla{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /*Tabla para celulares*/
+    .tabla-precios {
+        margin: 50px;
+    }
+    
+    .contacto {
+        margin: 20px;
+    }
+    
+    @media (max-width: 599px) {
+
+
+      /*Configuro en grilla mi galería para celulares con GRID*/
+      .contenedor-grid {
+          /*Habilito grid*/
+          display: grid;
+          /*Defino las columnas y su configuración*/
+          grid-template-columns: 1fr;
+          /*Le doy una distancia entre las columnas*/
+          column-gap: 10px;
+          /*Defino la cantidad de filas que quiero en mi grilla*/
+          grid-template-rows: 345px 345px 345px 345px 345px;
+          /*Establezco una distancia entre las filas*/
+          row-gap: 10px;
+          /*Alineo en el eje vertical*/
+          align-items: center;
+          /*alineo en el  eje horizontal.*/
+          justify-items: center;
+
+          #alien{
+            height: 300px;
+            width: 300px;
+          }
+
+          #messi{
+            height: 300px;
+            width: 300px;
+          }
+
+          #puddin{
+            height: 300px;
+            width: 300px;
+          }
+          #estrella{
+            height: 300px;
+            width: 300px;
+          }
+          #minnie{
+            height: 300px;
+            width: 300px;
+          }
+          #scooby{
+            height: 300px;
+            width: 300px;
+          }
+        
+
+      }
+      
+      .item-grid {
+          text-align: center;
+          /*border: 2px solid #1aa */
+
+      }
+    }
+    
+
+
+
+
+
+  /* Media query de Galeria para tablets */
+  @media (min-width: 600px) {
+    
+    /*Titulos h1 de Tablet*/
+    h1 {
+      /* Le doy formato a mis encabezados principales*/
+      color: $color_h1;
+      text-align: center;
+      font-size: 50px;
+      margin: 5px;
+      font-family: Impact, Haettenschweiler, "Arial Narrow", sans-serif;
+    }
+
+    /*h2 de Tablet*/
+    h2 {
+      font-size: 20px;
+      text-decoration: underline;
+      text-align: center;
+    }
+    
+    /*p de Tablet*/
+    p {
+      color: $color_p;
+      height: 40%;
+      text-align: left;
+      font-size: 25px;
+      text-align: center;
+    }
+
+
+    
+    /* header para Tablet con Nesting*/
+    header{
+      background-color: $fondo_header;
+      display: block;
+      justify-content: end;
+      padding-right: 20px;
+      border: 3px solid black;
+      
+      nav{
+        ul{
+          font-size: 15px;
+          /*Por defecto flex trabaja en fila*/    
+          /*display: flex;*/
+          color: $color_flex;
+          list-style: none;
+          /*justify-content: center;*/
+          align-items: flex-start;
+          /*Gap es una propiedad que trabaja en los dos ejes y funciona con Flex*/
+          gap: 30px;
+          flex-direction: row;
+
+        }
+      }
+    }
+
+
+    #main-index {
+      display: block;
+    }
+
+    .bienvenidos-lugar {
+      font-size: 50px;
+    }
+
+    .visita-web {
+      color: black;
+      height: 40%;
+      text-align: left;
+      font-size: 25px;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    .quienes_somos:hover {
+      background-color: beige;
+      color: darkorchid;
+    }
+
+    /*Lista de Precios para Tablet*/
+    li {
+      color: coral;
+    }
+
+    body {
+      /*Le doy formato al fondo*/
+      background-color: $color_body;
+    }
+
+    #principal {
+      color: crimson;
+      font-family: "Hanalei Fill", serif;
+      font-size: 70px;
+      text-align: center;
+    }
+
+    /*Logo para Tablets*/
+    #logo {
+      display: block;
+      height: 20%;
+      width: 20%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50%;
+      /*height: auto;*/
+    }
+
+    /*Laura Varela para celulares*/
+    #laura_varela {
+      display: block;
+      height: 20%;
+      width: 20%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50%;
+      /*height: auto;*/
+    }
+
+    /*Ricardo Ruiz para Tablets*/
+    #ricardo_ruiz {
+      display: block;
+      height: 20%;
+      width: 20%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50%;
+      /*height: auto;*/
+    }
+
+    .testimonios {
+      text-align: center;
+      align-content: center;
+    }
+    .video_intro {
+      /*display: flex;*/
+      width: 100%;
+      height: 60%;
+      background-color: $color_flex;
+      /*justify-content: center;*/
+      align-items: center;
+      /*padding: 20px;*/
+      border: 3px solid black;
+      /*margin: 10px;*/
+    }
+
+    #video_intro {
+      align-items: center;
+      justify-content: center;
+    }
+
+    /*Imagen de quienes somos para Tablet*/
+    #marvel {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      /*Coloco unidades relativas para la imagen*/
+      width: 45%;
+      height: 45%;
+    }
+
+    #mensaje {
+      /*Con Resize le impido al usuario que pueda modificar las dimensiones del textarea*/
+      resize: none;
+      width: 300px;
+      height: 100px;
+    }
+
+    /*Footer para Tablets*/
+    .footer {
+      color: $color_footer;
+      height: 40%;
+      text-align: left;
+      font-size: 20px;
+      text-align: center;
+    }
+    
+    .tabla{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /*Tabla para Tablets*/
+    .tabla-precios {
+      margin: 50px;
+    }
+    .contacto {
+      margin: 20px;
+    }
+    /*Configuro en grilla mi galería para Tablet con GRID*/
+    .contenedor-grid {
+      /*Habilito grid*/
+      display: grid;
+      /*Defino las columnas y su configuración*/
+      grid-template-columns: 1fr 1fr;
+      /*Le doy una distancia entre las columnas*/
+      column-gap: 30px;
+      /*Defino la cantidad de filas que quiero en mi grilla*/
+      grid-template-rows: 645px 645px 645px;
+      /*Establezco una distancia entre las filas*/
+      row-gap: 30px;
+      /*Alineo en el eje vertical*/
+      align-items: center;
+      /*alineo en el  eje horizontal.*/
+      justify-items: center;
+    }
+    .item-grid {
+      text-align: center;
+      /*border: 2px solid #1aa */
+    }
+  }
+
+
+
+
+
+
+
+  /* Media query de Galeria para computadoras de escritorio */
+  @media (min-width: 1024px) {
+    
+    /*h1 PC de escritorio*/
+    h1 {
+      /* Le doy formato a mis encabezados principales*/
+      color: $color_h1;
+      text-align: center;
+      font-size: 50px;
+      margin: 5px;
+      font-family: Impact, Haettenschweiler, "Arial Narrow", sans-serif;
+    }
+    
+    /*h2 PC de escritorio*/
+    h2 {
+      font-size: 20px;
+      text-decoration: underline;
+      text-align: center;
+    }
+    
+    /*p de escritorio*/
+    p {
+      color: $color_p;
+      height: 40%;
+      text-align: left;
+      font-size: 25px;
+      text-align: center;
+    }
+    
+ 
+
+    /*header para PCs de escritorio con Nesting*/
+    header{
+      background-color: $fondo_header;
+      display: block;
+      justify-content: end;
+      padding-right: 20px;
+      border: 3px solid black;
+
+      nav{
+        ul{
+          font-size: 20px;
+          /*Por defecto flex trabaja en fila*/
+          /*display: flex;*/
+          color: $color_flex;
+          list-style: none;
+          /*justify-content: center;*/
+          align-items: flex-start;
+          /*Gap es una propiedad que trabaja en los dos ejes y funciona con Flex*/
+          gap: 30px;
+          flex-direction: row;
+
+        }
+      }
+    }    
+
+
+    #main-index {
+      display: block;
+    }
+
+    .bienvenidos-lugar {
+      font-size: 50px;
+    }
+
+    .visita-web {
+      color: black;
+      height: 40%;
+      text-align: left;
+      font-size: 25px;
+      text-align: center;
+      text-decoration: underline;
+    }
+    
+    .quienes_somos:hover {
+      background-color: beige;
+      color: darkorchid;
+    }
+    
+    /*Lista de precios para PCs de escritorio*/
+    li {
+      font-size: 18px;
+      color: coral;
+    }
+    
+    body {
+      /*Le doy formato al fondo*/
+      background-color: $color_body;
+    }
+    
+    #principal {
+      color: crimson;
+      font-family: "Hanalei Fill", serif;
+      font-size: 70px;
+      text-align: center;
+    }
+
+    /*Logo para PCs de escritorio*/
+    #logo {
+      display: block;
+      height: 30%;
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 70%;
+      height: auto;
+    }
+
+    /*Laura Varela para PCs de escritorio*/
+    #laura_varela {
+      display: block;
+      height: 20%;
+      width: 20%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50%;
+      /*height: auto;*/
+    }
+
+    /*Ricardo Ruiz para PCs de escritorio*/
+    #ricardo_ruiz {
+      display: block;
+      height: 20%;
+      width: 20%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50%;
+      /*height: auto;*/
+    }
+    
+    .testimonios {
+      text-align: center;
+      align-content: center;
+    }
+
+    
+    .video_intro {
+      /*display: flex;*/
+      width: 100%;
+      height: 60%;
+      background-color: $color_flex;
+      /*justify-content: center;*/
+      align-items: center;
+      /*padding: 20px;*/
+      border: 3px solid black;
+      /*margin: 10px;*/
+    }
+    
+    #video_intro {
+      align-items: center;
+      justify-content: center;
+    }
+    
+    #marvel {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      /*Coloco unidades relativas para la imagen*/
+      width: 15%;
+      height: 15%;
+    }
+    
+    #mensaje {
+      /*Con Resize le impido al usuario que pueda modificar las dimensiones del textarea*/
+      resize: none;
+      width: 300px;
+      height: 100px;
+    }
+
+    /*Footer para PCs de escritorio*/
+    .footer {
+      color: $color_footer;
+      height: 40%;
+      text-align: left;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .tabla{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /*Tabla para PCs de escritorio*/
+    .tabla-precios {
+      margin: 50px;
+    }
+
+    .contacto {
+      margin: 20px;
+    }
+
+    /*Configuro en grilla mi galería para PCs de escritorio con GRID*/
+    .contenedor-grid {
+      /*Habilito grid*/
+      display: grid;
+      /*Defino las columnas y su configuración*/
+      grid-template-columns: 1fr 1fr 1fr;
+      /*Le doy una distancia entre las columnas*/
+      column-gap: 30px;
+      /*Defino la cantidad de filas que quiero en mi grilla*/
+      grid-template-rows: 645px 645px;
+      /*Establezco una distancia entre las filas*/
+      row-gap: 30px;
+      /*Alineo en el eje vertical*/
+      align-items: center;
+      /*alineo en el  eje horizontal.*/
+      justify-items: center;
+    }
+    .item-grid {
+      text-align: center;
+      /*border: 2px solid #1aa */
+    }
+  }

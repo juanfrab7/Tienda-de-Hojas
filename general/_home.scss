@@ -1,0 +1,52 @@
+// importo variables
+
+@import "../utilidades/variables";
+
+// importo mixin
+
+@import "../utilidades/mixin";
+
+header{
+    nav{
+        ul{
+            @include mixin_flex;
+            
+        }
+    }
+
+}
+
+.video_intro {
+    @include mixin_flex;
+}
+
+@media (min-width: 600px) {
+    header{
+        nav{
+            ul{
+                @include mixin_flex;
+                
+            }
+        }
+
+    }
+    
+    .video_intro {
+        @include mixin_flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    header{
+        nav{
+            ul{
+                @include mixin_flex;
+                
+            }
+        }
+
+    }
+    .video_intro {
+        @include mixin_flex;
+    }
+}

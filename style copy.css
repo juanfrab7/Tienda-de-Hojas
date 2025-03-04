@@ -1,38 +1,4 @@
 @charset "UTF-8";
-/*Importo los valores de variables desde el archivo _variables.scss que se encuentra en la carpeta utilidades*/
-/*Con scss creo variables para el uso*/
-/*Importo el Mixin con variables*/
-/*Con scss creo variables para el uso*/
-header nav ul {
-  display: flex;
-  justify-content: center;
-}
-
-.video_intro {
-  display: flex;
-  justify-content: center;
-}
-
-@media (min-width: 600px) {
-  header nav ul {
-    display: flex;
-    justify-content: center;
-  }
-  .video_intro {
-    display: flex;
-    justify-content: center;
-  }
-}
-@media (min-width: 1024px) {
-  header nav ul {
-    display: flex;
-    justify-content: center;
-  }
-  .video_intro {
-    display: flex;
-    justify-content: center;
-  }
-}
 /*Comienzo dejando en cero todos los campos utilizando el selector universal y reseteando los valores a cero*/
 /*Comienzo mi codigo de css con la filosofía mobile first, para luego adaptarlo a tablets y PCs de escritorios con media queries*/
 * {
@@ -42,8 +8,7 @@ header nav ul {
   box-sizing: border-box;
 }
 
-/* Media query para celulares */
-/*Títulos h1 para celulares*/
+/* Media query de Galeria para celulares */
 h1 {
   /* Le doy formato a mis encabezados principales*/
   color: crimson;
@@ -53,7 +18,6 @@ h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow", sans-serif;
 }
 
-/*Títulos h2 para celulares*/
 h2 {
   font-size: 20px;
   text-decoration: underline;
@@ -69,30 +33,28 @@ p {
   text-align: center;
 }
 
-/*Nesting header para celulares con nesting*/
-header {
-  /*Color del menu hamburguesa*/
+#header-index {
   background-color: rgb(107, 214, 107);
+  /*Por defecto flex trabaja en fila*/
   display: block;
   justify-content: end;
   padding-right: 20px;
   border: 3px solid black;
 }
+
 header nav ul {
-  font-size: 15px;
-  /*Por defecto flex trabaja en fila*/
-  /*display: flex;*/
-  color: rgb(135, 222, 142);
+  display: flex;
+  color: rgb(36, 189, 44);
   list-style: none;
-  /*justify-content: center;*/
+  justify-content: center;
   align-items: flex-start;
   /*Gap es una propiedad que trabaja en los dos ejes y funciona con Flex*/
-  gap: 5px;
-  flex-direction: column;
+  gap: 30px;
 }
 
 #main-index {
   display: block;
+  /*flex-wrap:nowrap;*/
 }
 
 .bienvenidos-lugar {
@@ -118,7 +80,6 @@ li {
   color: coral;
 }
 
-/*body para celulares*/
 body {
   /*Le doy formato al fondo*/
   background-color: honeydew;
@@ -142,39 +103,17 @@ body {
   height: auto;
 }
 
-/*Laura Varela para celulares*/
-#laura_varela {
-  display: block;
-  height: 20%;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50%;
-  /*height: auto;*/
-}
-
-/*Ricardo Ruiz para celulares*/
-#ricardo_ruiz {
-  display: block;
-  height: 20%;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50%;
-  /*height: auto;*/
-}
-
 .testimonios {
   text-align: center;
   align-content: center;
 }
 
 .video_intro {
-  /*display: flex;*/
+  display: flex;
   width: 100%;
   height: 60%;
   background-color: rgb(135, 222, 142);
-  /*justify-content: center;*/
+  justify-content: center;
   align-items: center;
   /*padding: 20px;*/
   border: 3px solid black;
@@ -203,7 +142,6 @@ body {
   height: 100px;
 }
 
-/*footer para celulares*/
 .footer {
   color: rgb(58, 168, 55);
   height: 40%;
@@ -212,13 +150,6 @@ body {
   text-align: center;
 }
 
-.tabla {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*Tabla para celulares*/
 .tabla-precios {
   margin: 50px;
 }
@@ -227,57 +158,32 @@ body {
   margin: 20px;
 }
 
-@media (max-width: 599px) {
-  /*Configuro en grilla mi galería para celulares con GRID*/
-  .contenedor-grid {
-    /*Habilito grid*/
-    display: grid;
-    /*Defino las columnas y su configuración*/
-    grid-template-columns: 1fr;
-    /*Le doy una distancia entre las columnas*/
-    -moz-column-gap: 10px;
-         column-gap: 10px;
-    /*Defino la cantidad de filas que quiero en mi grilla*/
-    grid-template-rows: 345px 345px 345px 345px 345px;
-    /*Establezco una distancia entre las filas*/
-    row-gap: 10px;
-    /*Alineo en el eje vertical*/
-    align-items: center;
-    /*alineo en el  eje horizontal.*/
-    justify-items: center;
-  }
-  .contenedor-grid #alien {
-    height: 300px;
-    width: 300px;
-  }
-  .contenedor-grid #messi {
-    height: 300px;
-    width: 300px;
-  }
-  .contenedor-grid #puddin {
-    height: 300px;
-    width: 300px;
-  }
-  .contenedor-grid #estrella {
-    height: 300px;
-    width: 300px;
-  }
-  .contenedor-grid #minnie {
-    height: 300px;
-    width: 300px;
-  }
-  .contenedor-grid #scooby {
-    height: 300px;
-    width: 300px;
-  }
-  .item-grid {
-    text-align: center;
-    /*border: 2px solid #1aa */
-  }
+/*Configuro en grilla mi galería para celulares*/
+.contenedor-grid {
+  /*Habilito grid*/
+  display: grid;
+  /*Defino las columnas y su configuración*/
+  grid-template-columns: 1fr 1fr 1fr;
+  /*Le doy una distancia entre las columnas*/
+  column-gap: 30px;
+  /*Defino la cantidad de filas que quiero en mi grilla*/
+  grid-template-rows: 645px 645px;
+  /*Establezco una distancia entre las filas*/
+  row-gap: 30px;
+  /*Alineo en el eje vertical*/
+  align-items: center;
+  /*alineo en el  eje horizontal.*/
+  justify-items: center;
 }
+
+.item-grid {
+  text-align: center;
+  /*border: 2px solid #1aa */
+}
+
 /* Media query de Galeria para tablets */
 @media (min-width: 600px) {
-  /*Titulos h1 de Tablet*/
+  /*h1 de Tablet*/
   h1 {
     /* Le doy formato a mis encabezados principales*/
     color: crimson;
@@ -300,28 +206,26 @@ body {
     font-size: 25px;
     text-align: center;
   }
-  /* header para Tablet con Nesting*/
-  header {
+  #header-index {
     background-color: rgb(107, 214, 107);
+    /*Por defecto flex trabaja en fila*/
     display: block;
     justify-content: end;
     padding-right: 20px;
     border: 3px solid black;
   }
   header nav ul {
-    font-size: 15px;
-    /*Por defecto flex trabaja en fila*/
-    /*display: flex;*/
-    color: rgb(135, 222, 142);
+    display: flex;
+    color: rgb(36, 189, 44);
     list-style: none;
-    /*justify-content: center;*/
+    justify-content: center;
     align-items: flex-start;
     /*Gap es una propiedad que trabaja en los dos ejes y funciona con Flex*/
     gap: 30px;
-    flex-direction: row;
   }
   #main-index {
     display: block;
+    /*flex-wrap:nowrap;*/
   }
   .bienvenidos-lugar {
     font-size: 50px;
@@ -360,38 +264,18 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 50%;
-    /*height: auto;*/
-  }
-  /*Laura Varela para celulares*/
-  #laura_varela {
-    display: block;
-    height: 20%;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 50%;
-    /*height: auto;*/
-  }
-  /*Ricardo Ruiz para Tablets*/
-  #ricardo_ruiz {
-    display: block;
-    height: 20%;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 50%;
-    /*height: auto;*/
+    height: auto;
   }
   .testimonios {
     text-align: center;
     align-content: center;
   }
   .video_intro {
-    /*display: flex;*/
+    display: flex;
     width: 100%;
     height: 60%;
     background-color: rgb(135, 222, 142);
-    /*justify-content: center;*/
+    justify-content: center;
     align-items: center;
     /*padding: 20px;*/
     border: 3px solid black;
@@ -416,7 +300,6 @@ body {
     width: 300px;
     height: 100px;
   }
-  /*Footer para Tablets*/
   .footer {
     color: rgb(58, 168, 55);
     height: 40%;
@@ -424,27 +307,20 @@ body {
     font-size: 20px;
     text-align: center;
   }
-  .tabla {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /*Tabla para Tablets*/
   .tabla-precios {
     margin: 50px;
   }
   .contacto {
     margin: 20px;
   }
-  /*Configuro en grilla mi galería para Tablet con GRID*/
+  /*Configuro en grilla mi galería para Tablet*/
   .contenedor-grid {
     /*Habilito grid*/
     display: grid;
     /*Defino las columnas y su configuración*/
     grid-template-columns: 1fr 1fr;
     /*Le doy una distancia entre las columnas*/
-    -moz-column-gap: 30px;
-         column-gap: 30px;
+    column-gap: 30px;
     /*Defino la cantidad de filas que quiero en mi grilla*/
     grid-template-rows: 645px 645px 645px;
     /*Establezco una distancia entre las filas*/
@@ -484,28 +360,26 @@ body {
     font-size: 25px;
     text-align: center;
   }
-  /*header para PCs de escritorio con Nesting*/
-  header {
+  #header-index {
     background-color: rgb(107, 214, 107);
+    /*Por defecto flex trabaja en fila*/
     display: block;
     justify-content: end;
     padding-right: 20px;
     border: 3px solid black;
   }
   header nav ul {
-    font-size: 20px;
-    /*Por defecto flex trabaja en fila*/
-    /*display: flex;*/
-    color: rgb(135, 222, 142);
+    display: flex;
+    color: rgb(36, 189, 44);
     list-style: none;
-    /*justify-content: center;*/
+    justify-content: center;
     align-items: flex-start;
     /*Gap es una propiedad que trabaja en los dos ejes y funciona con Flex*/
     gap: 30px;
-    flex-direction: row;
   }
   #main-index {
     display: block;
+    /*flex-wrap:nowrap;*/
   }
   .bienvenidos-lugar {
     font-size: 50px;
@@ -547,36 +421,16 @@ body {
     max-width: 70%;
     height: auto;
   }
-  /*Laura Varela para PCs de escritorio*/
-  #laura_varela {
-    display: block;
-    height: 20%;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 50%;
-    /*height: auto;*/
-  }
-  /*Ricardo Ruiz para PCs de escritorio*/
-  #ricardo_ruiz {
-    display: block;
-    height: 20%;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 50%;
-    /*height: auto;*/
-  }
   .testimonios {
     text-align: center;
     align-content: center;
   }
   .video_intro {
-    /*display: flex;*/
+    display: flex;
     width: 100%;
     height: 60%;
     background-color: rgb(135, 222, 142);
-    /*justify-content: center;*/
+    justify-content: center;
     align-items: center;
     /*padding: 20px;*/
     border: 3px solid black;
@@ -600,7 +454,6 @@ body {
     width: 300px;
     height: 100px;
   }
-  /*Footer para PCs de escritorio*/
   .footer {
     color: rgb(58, 168, 55);
     height: 40%;
@@ -608,27 +461,20 @@ body {
     font-size: 20px;
     text-align: center;
   }
-  .tabla {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /*Tabla para PCs de escritorio*/
   .tabla-precios {
     margin: 50px;
   }
   .contacto {
     margin: 20px;
   }
-  /*Configuro en grilla mi galería para PCs de escritorio con GRID*/
+  /*Configuro en grilla mi galería para PC de escritorio*/
   .contenedor-grid {
     /*Habilito grid*/
     display: grid;
     /*Defino las columnas y su configuración*/
     grid-template-columns: 1fr 1fr 1fr;
     /*Le doy una distancia entre las columnas*/
-    -moz-column-gap: 30px;
-         column-gap: 30px;
+    column-gap: 30px;
     /*Defino la cantidad de filas que quiero en mi grilla*/
     grid-template-rows: 645px 645px;
     /*Establezco una distancia entre las filas*/
@@ -642,4 +488,6 @@ body {
     text-align: center;
     /*border: 2px solid #1aa */
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

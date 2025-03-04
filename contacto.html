@@ -11,10 +11,17 @@
 
     <title>Contacto</title>
 
+    <!-- Le coloco un icono -->
+    <link rel="icon" href="imagenes/logo.ico">
+
+
     <!--Vinculo bootstrap-->
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
+    <!--Librerias-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 
 <body>
@@ -27,7 +34,7 @@
     
     <!--Encabezado-->
 
-    <header id="header-index">
+    <header class="header">
         <!-- Utilizo la etiqueta nav como sección de la página que contiene los enlaces de navegación -->
         <nav class="navbar">
 
@@ -73,13 +80,15 @@
     
     <!--Contenido principal-->
     <main>
+        <!--Animo el titulo principal-->
+        <h1 id="principal" class="animate__animated animate__pulse">Contacto</h1>
 
-        <h1 id="principal">Contacto</h1>
+        
 
         <!--Formulario de contacto-->
-        <form action="/submit" method="post" enctype="application/x-www-form-urlencoded">
+        <form action="/submit" method="post" enctype="application/x-www-form-urlencoded" class="contacto">
 
-            <label for="mensaje">Mensaje:</label>
+            <label for="mensaje">Mensaje:</label><br>
             <!-- Ingreso un textarea para permitirle al usuario cargar datos alfanuméricos -->
             <textarea name="mensaje" id="mensaje" placeholder="Ingrese aquí su mensaje" required></textarea>
 
