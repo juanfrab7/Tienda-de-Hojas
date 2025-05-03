@@ -392,6 +392,7 @@ body {
     text-align: center;
     text-decoration: underline;
   }
+  /*configuro hover*/
   .quienes_somos:hover {
     background-color: beige;
     color: darkorchid;
